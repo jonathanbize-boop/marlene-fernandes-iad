@@ -169,6 +169,9 @@ img{display:block;max-width:100%}
 .prop-grid .card-main .card-name{font-size:1rem;margin-bottom:10px}
 .prop-grid .card-main p{font-size:.87rem;color:var(--ink-2);line-height:1.7;margin-bottom:14px}
 
+/* ─── SERVICE GRID ─── */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+
 /* ─── SERVICE CARDS ─── */
 .svc-card{background:var(--white);border:1px solid var(--ground-3);border-radius:3px;padding:40px 36px;position:relative;overflow:hidden;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
 .svc-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ochre);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
@@ -296,6 +299,9 @@ footer{background:var(--dark);color:rgba(250,247,242,.55)}
   .ft-top{grid-template-columns:1fr}
   .ft-bot{flex-direction:column;gap:12px;text-align:center}
   .process{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr;gap:20px}
+  .svc-card .btn{width:100%;justify-content:center;text-align:center}
+  .pg-hero{padding:100px 0 48px}
 }
 @media(max-width:480px){
   .wrap,.wrap-sm{padding:0 20px}
@@ -544,10 +550,10 @@ footer{background:var(--dark);color:rgba(250,247,242,.55)}
   <div class="sec-dark" style="padding:80px 0;position:relative;overflow:hidden">
     <div style="position:absolute;top:0;bottom:0;left:0;right:0;background:radial-gradient(ellipse at 25% 50%,rgba(181,112,58,.12) 0%,transparent 60%)" aria-hidden="true"></div>
     <div class="wrap" style="position:relative">
-      <span class="eyebrow">Service offert</span>
-      <h2 class="h2" style="color:var(--ground);margin:20px 0 16px;max-width:640px;margin-left:auto;margin-right:auto">Votre bien vaut peut-être plus que vous ne croyez.</h2>
-      <p style="color:rgba(250,247,242,.55);font-size:1rem;max-width:480px;margin:0 auto 36px;line-height:1.75">Une estimation précise et gratuite — sans engagement — réalisée par quelqu'un qui connaît votre rue.</p>
-      <div style="text-align:center">
+      <div style="display:flex;flex-direction:column;align-items:center;text-align:center">
+        <span class="eyebrow">Service offert</span>
+        <h2 class="h2" style="color:var(--ground);margin:20px 0 16px;max-width:640px">Votre bien vaut peut-être plus que vous ne croyez.</h2>
+        <p style="color:rgba(250,247,242,.55);font-size:1rem;max-width:480px;margin:0 0 36px;line-height:1.75">Une estimation précise et gratuite — sans engagement — réalisée par quelqu'un qui connaît votre rue.</p>
         <a class="btn btn-ochre" href="#" data-page="estimation">
           <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Estimer mon bien gratuitement
@@ -669,7 +675,7 @@ footer{background:var(--dark);color:rgba(250,247,242,.55)}
 
   <div class="sec">
     <div class="wrap">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div class="svc-grid">
         <div class="svc-card fade-in">
           <div class="svc-icon"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 6 L42 20 L42 44 L6 44 L6 20 Z"/><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" transform="translate(10,14) scale(0.7)"/></svg></div>
           <h3>Estimation gratuite</h3>
