@@ -67,7 +67,7 @@ img{display:block;max-width:100%}
 .rule-c{margin-left:auto;margin-right:auto}
 
 /* ─── BUTTONS ─── */
-.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:.25s var(--ease);cursor:pointer;border:none}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:50px;transition:.25s var(--ease);cursor:pointer;border:none}
 .btn-ochre{background:var(--ochre);color:var(--white)}
 .btn-ochre:hover{background:var(--ochre-lt);transform:translateY(-2px)}
 .btn-outline{border:1.5px solid var(--ochre);color:var(--ochre);background:none}
@@ -138,7 +138,7 @@ img{display:block;max-width:100%}
 .card-img{height:200px;position:relative;overflow:hidden}
 .card-img-inner{position:absolute;inset:0;transition:transform .55s var(--ease)}
 .card:hover .card-img-inner{transform:scale(1.05)}
-.card-tag{position:absolute;top:14px;left:14px;background:var(--ochre);color:var(--white);font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:5px 11px;border-radius:1px;z-index:2}
+.card-tag{position:absolute;top:14px;left:14px;background:var(--ochre);color:var(--white);font-size:.65rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:5px 12px;border-radius:50px;z-index:2}
 .card-body{padding:24px}
 .card-price{font-family:var(--f-serif);font-size:1.3rem;color:var(--ink);margin-bottom:5px}
 .card-name{font-size:.9rem;font-weight:600;margin-bottom:6px;color:var(--ink)}
@@ -183,7 +183,7 @@ img{display:block;max-width:100%}
 select.fc{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%237A6B59' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px}
 textarea.fc{resize:vertical;min-height:100px}
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.fsub{width:100%;padding:17px;font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--ochre);color:var(--white);border:none;border-radius:2px;cursor:pointer;transition:.25s var(--ease);display:flex;align-items:center;justify-content:center;gap:10px}
+.fsub{width:100%;padding:17px;font-size:.82rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--ochre);color:var(--white);border:none;border-radius:50px;cursor:pointer;transition:.25s var(--ease);display:flex;align-items:center;justify-content:center;gap:10px}
 .fsub:hover{background:var(--ochre-lt);transform:translateY(-2px)}
 .fnote{font-size:.74rem;color:var(--ink-2);text-align:center;margin-top:12px;line-height:1.6}
 
@@ -196,7 +196,7 @@ textarea.fc{resize:vertical;min-height:100px}
 
 /* ─── ZONE TAGS ─── */
 .tag-cloud{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
-.tag{display:inline-block;padding:7px 18px;background:var(--ochre-pale);border:1px solid rgba(181,112,58,.25);color:var(--ink);font-size:.8rem;border-radius:2px}
+.tag{display:inline-block;padding:7px 18px;background:var(--ochre-pale);border:1px solid rgba(181,112,58,.25);color:var(--ink);font-size:.8rem;border-radius:50px}
 
 /* ─── PASSERELLE ─── */
 .passerelle{background:var(--dark);border-radius:4px;padding:48px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-top:72px}
@@ -234,7 +234,7 @@ textarea.fc{resize:vertical;min-height:100px}
 
 /* ─── FILTER ─── */
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
-.filter-btn{padding:9px 20px;border:1.5px solid var(--ground-3);border-radius:2px;font-size:.77rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);cursor:pointer;transition:.2s;background:none}
+.filter-btn{padding:9px 20px;border:1.5px solid var(--ground-3);border-radius:50px;font-size:.77rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);cursor:pointer;transition:.2s;background:none}
 .filter-btn.on,.filter-btn:hover{border-color:var(--ochre);color:var(--ink);background:var(--ochre-pale)}
 
 /* ─── SUCCESS STATE ─── */
@@ -272,8 +272,9 @@ footer{background:var(--dark);color:rgba(250,247,242,.55)}
   .contact-grid{grid-template-columns:1fr;gap:48px}
 }
 @media(max-width:768px){
-  .nav-links,.nav-a[data-page="estimation"].btn-ochre{display:none}
+  .nav-links,.nav-cta{display:none}
   .nav-burger{display:flex}
+  .nav-in{padding:0 20px}
   .grid-3{grid-template-columns:1fr}
   .prop-grid{grid-template-columns:1fr}
   .prop-grid .card-main{grid-row:auto}
@@ -312,7 +313,7 @@ footer{background:var(--dark);color:rgba(250,247,242,.55)}
       <a class="nav-a" href="#" data-page="listings">Mes biens</a>
       <a class="nav-a" href="#" data-page="contact">Contact</a>
     </nav>
-    <a class="btn btn-ochre" href="#" data-page="estimation" style="padding:11px 24px;font-size:.75rem">Estimation gratuite</a>
+    <a class="btn btn-ochre nav-cta" href="#" data-page="estimation" style="padding:11px 24px;font-size:.75rem">Estimation gratuite</a>
     <button class="nav-burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
