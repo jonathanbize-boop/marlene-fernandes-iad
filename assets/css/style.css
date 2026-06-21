@@ -31,6 +31,12 @@
   --maxw: 1240px;
   --ease: cubic-bezier(.16,1,.3,1);
   --arch: 50% 50% 14px 14px / 90% 90% 14px 14px; /* sommet en arche */
+
+  /* Rayons — angles arrondis */
+  --r-btn: 14px;   /* boutons */
+  --r-sm:  10px;   /* champs, tags, puces */
+  --r-md:  18px;   /* cartes, encarts, citations */
+  --r-lg:  26px;   /* grandes surfaces (formulaire, passerelle) */
 }
 
 /* ─── RESET ─── */
@@ -46,7 +52,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 input,textarea,select{font-family:inherit;font-size:1rem}
 ul{list-style:none}
 img{display:block;max-width:100%;height:auto}
-:focus-visible{outline:2.5px solid var(--brass-deep);outline-offset:3px;border-radius:3px}
+:focus-visible{outline:2.5px solid var(--brass-deep);outline-offset:3px;border-radius:var(--r-sm)}
 
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
@@ -99,7 +105,7 @@ p{color:var(--ink-2)}
 .btn{
   display:inline-flex;align-items:center;gap:11px;padding:16px 30px;
   font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
-  border-radius:2px;transition:.28s var(--ease);cursor:pointer;line-height:1;
+  border-radius:var(--r-btn);transition:.28s var(--ease);cursor:pointer;line-height:1;
 }
 .btn svg{width:16px;height:16px;transition:transform .28s var(--ease)}
 .btn:hover svg{transform:translateX(4px)}
@@ -122,7 +128,7 @@ p{color:var(--ink-2)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:100%;max-width:var(--maxw);margin:0 auto;padding:0 40px}
 .logo{display:flex;align-items:center;gap:13px}
 .logo-mark{
-  width:42px;height:42px;flex-shrink:0;border-radius:50% 50% 6px 6px;
+  width:42px;height:42px;flex-shrink:0;border-radius:50% 50% 12px 12px;
   background:var(--forest);color:var(--brass-pale);display:flex;align-items:center;justify-content:center;
   font-family:var(--f-display);font-size:1.05rem;
 }
@@ -165,7 +171,7 @@ p{color:var(--ink-2)}
 }
 .hero-badge{
   position:absolute;left:-18px;bottom:14%;background:var(--ivory);border:1px solid var(--line);
-  border-radius:4px;padding:16px 22px;box-shadow:0 18px 44px rgba(27,30,25,.14);max-width:210px;
+  border-radius:var(--r-md);padding:16px 22px;box-shadow:0 18px 44px rgba(27,30,25,.14);max-width:210px;
 }
 .hero-badge strong{font-family:var(--f-display);font-size:1.9rem;color:var(--forest);display:block;line-height:1}
 .hero-badge span{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
@@ -188,7 +194,7 @@ p{color:var(--ink-2)}
 .stat span{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:8px;display:block}
 
 /* ─── CARTES ─── */
-.card{background:var(--white);border:1px solid var(--line);border-radius:4px;overflow:hidden;transition:.3s var(--ease)}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;transition:.3s var(--ease)}
 .card:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(27,30,25,.1);border-color:var(--ivory-3)}
 
 /* Liste atouts à puce laiton */
@@ -201,7 +207,7 @@ p{color:var(--ink-2)}
 .arch-img img{width:100%;height:100%;object-fit:cover}
 
 /* ─── SERVICES (cartes) ─── */
-.svc{display:block;padding:38px 34px;background:var(--white);border:1px solid var(--line);border-radius:4px;position:relative;transition:.3s var(--ease);height:100%}
+.svc{display:block;padding:38px 34px;background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);position:relative;transition:.3s var(--ease);height:100%}
 .svc:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(27,30,25,.1)}
 .svc-num{font-family:var(--f-display);font-size:.95rem;color:var(--brass);letter-spacing:.1em}
 .svc h3{margin:18px 0 12px}
@@ -221,31 +227,31 @@ p{color:var(--ink-2)}
 .sec-forest .step::after{background:rgba(247,244,238,.18)}
 
 /* ─── BIENS (annonces) ─── */
-.listing{background:var(--white);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;transition:.3s var(--ease)}
+.listing{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;display:flex;flex-direction:column;transition:.3s var(--ease)}
 .listing:hover{transform:translateY(-5px);box-shadow:0 22px 50px rgba(27,30,25,.1)}
 .listing-img{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--ivory-3)}
 .listing-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
 .listing:hover .listing-img img{transform:scale(1.05)}
-.listing-tag{position:absolute;top:14px;left:14px;background:var(--ivory);color:var(--forest);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 13px;border-radius:2px;font-weight:600}
+.listing-tag{position:absolute;top:14px;left:14px;background:var(--ivory);color:var(--forest);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;padding:6px 13px;border-radius:var(--r-sm);font-weight:600}
 .listing-body{padding:26px 24px;display:flex;flex-direction:column;flex:1}
 .listing-loc{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--brass-deep);font-weight:600}
 .listing-body h3{font-size:1.2rem;margin:8px 0 12px}
 .listing-body p{font-size:.92rem;flex:1}
 .listing-specs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 20px}
-.listing-specs span{font-size:.76rem;background:var(--ivory-2);border:1px solid var(--line);padding:6px 12px;border-radius:2px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.listing-specs span{font-size:.76rem;background:var(--ivory-2);border:1px solid var(--line);padding:6px 12px;border-radius:var(--r-sm);color:var(--ink-2);font-variant-numeric:tabular-nums}
 .listing .btn{margin-top:auto}
 
 /* Passerelle IAD */
-.gateway{border:1.5px dashed var(--brass);border-radius:6px;padding:48px;text-align:center;background:var(--brass-pale)}
-.gateway .iad-slot{margin-top:24px;border:1px dashed var(--line);border-radius:4px;padding:60px 20px;color:var(--ink-2);font-size:.9rem;background:rgba(255,255,255,.5)}
+.gateway{border:1.5px dashed var(--brass);border-radius:var(--r-lg);padding:48px;text-align:center;background:var(--brass-pale)}
+.gateway .iad-slot{margin-top:24px;border:1px dashed var(--line);border-radius:var(--r-md);padding:60px 20px;color:var(--ink-2);font-size:.9rem;background:rgba(255,255,255,.5)}
 
 /* ─── FORMULAIRES ─── */
-.form{background:var(--white);border:1px solid var(--line);border-radius:6px;padding:40px}
+.form{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:40px}
 .field{margin-bottom:22px}
 .field label{display:block;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);font-weight:600;margin-bottom:9px}
 .field .req{color:var(--brass-deep)}
 .field input,.field select,.field textarea{
-  width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:3px;
+  width:100%;padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--r-sm);
   background:var(--ivory);color:var(--ink);transition:border-color .2s,box-shadow .2s;
 }
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--forest);box-shadow:0 0 0 3px rgba(44,58,46,.1)}
@@ -260,14 +266,14 @@ p{color:var(--ink-2)}
 /* ─── COORDONNÉES ─── */
 .contact-item{display:flex;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
 .contact-item:last-child{border-bottom:none}
-.contact-ico{width:46px;height:46px;flex-shrink:0;border-radius:50% 50% 6px 6px;background:var(--ivory-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--forest)}
+.contact-ico{width:46px;height:46px;flex-shrink:0;border-radius:50% 50% 12px 12px;background:var(--ivory-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--forest)}
 .contact-ico svg{width:20px;height:20px}
 .contact-item h3{font-size:1.05rem;margin-bottom:4px}
 .contact-item p,.contact-item a{font-size:.95rem;color:var(--ink-2)}
 .contact-item a:hover{color:var(--forest)}
 
 /* ─── AVIS ─── */
-.quote{background:var(--white);border:1px solid var(--line);border-radius:4px;padding:34px 32px;height:100%;display:flex;flex-direction:column}
+.quote{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:34px 32px;height:100%;display:flex;flex-direction:column}
 .quote .stars{color:var(--brass);letter-spacing:2px;margin-bottom:16px;font-size:.95rem}
 .quote blockquote{font-family:var(--f-display);font-size:1.15rem;font-style:italic;line-height:1.5;color:var(--ink);flex:1}
 .quote cite{margin-top:22px;font-style:normal;font-size:.86rem;color:var(--ink-2);letter-spacing:.04em}
