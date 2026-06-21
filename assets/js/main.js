@@ -23,6 +23,21 @@
     });
   }
 
+  /* Galerie des pages annonce : clic sur une vignette = image principale */
+  var galMain = document.getElementById('galMain');
+  if (galMain) {
+    var thumbs = document.querySelectorAll('.gallery-thumb');
+    thumbs.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var img = btn.querySelector('img');
+        if (!img) return;
+        galMain.src = img.getAttribute('src');
+        galMain.alt = img.getAttribute('alt') || '';
+        thumbs.forEach(function (b) { b.setAttribute('aria-current', b === btn ? 'true' : 'false'); });
+      });
+    });
+  }
+
   /* Formulaires de démonstration : confirmation sans backend.
      À remplacer par le service du webdesigner (Formspree, IAD, etc.). */
   document.querySelectorAll('form[data-mock]').forEach(function (f) {

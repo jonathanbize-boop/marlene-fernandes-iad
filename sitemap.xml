@@ -7,6 +7,9 @@
   <url><loc>https://marlene-fernandes.vercel.app/service-vente.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://marlene-fernandes.vercel.app/service-conseil.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://marlene-fernandes.vercel.app/biens.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://marlene-fernandes.vercel.app/annonce-maison-caderousse.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://marlene-fernandes.vercel.app/annonce-boxes-108-bollene.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://marlene-fernandes.vercel.app/annonce-box-54-bollene.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://marlene-fernandes.vercel.app/avis.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://marlene-fernandes.vercel.app/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://marlene-fernandes.vercel.app/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
