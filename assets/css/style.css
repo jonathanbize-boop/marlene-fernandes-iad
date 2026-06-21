@@ -71,7 +71,7 @@ body::before{
 .sec-tight{padding:72px 0}
 .sec-ivory2{background:var(--ivory-2)}
 .sec-forest{background:var(--forest);color:var(--ivory)}
-.sec-forest .ink-2,.sec-forest .body-lg{color:rgba(247,244,238,.78)}
+.sec-forest .ink-2,.sec-forest .body-lg,.sec-forest p{color:rgba(247,244,238,.78)}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
