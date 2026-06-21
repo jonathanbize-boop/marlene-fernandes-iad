@@ -103,12 +103,12 @@ p{color:var(--ink-2)}
 }
 .btn svg{width:16px;height:16px;transition:transform .28s var(--ease)}
 .btn:hover svg{transform:translateX(4px)}
-.btn-forest{background:var(--forest);color:var(--ivory)}
-.btn-forest:hover{background:var(--forest-2);transform:translateY(-2px);box-shadow:0 12px 28px rgba(44,58,46,.22)}
-.btn-brass{background:var(--brass);color:#fff}
-.btn-brass:hover{background:var(--brass-deep);transform:translateY(-2px);box-shadow:0 12px 28px rgba(138,99,38,.25)}
-.btn-outline{border:1.5px solid var(--forest);color:var(--forest);background:none}
-.btn-outline:hover{background:var(--forest);color:var(--ivory);transform:translateY(-2px)}
+.btn-forest{background:var(--brass-deep);color:#fff}
+.btn-forest:hover{background:#6E4E1E;transform:translateY(-2px);box-shadow:0 12px 28px rgba(138,99,38,.28)}
+.btn-brass{background:var(--brass-deep);color:#fff}
+.btn-brass:hover{background:#6E4E1E;transform:translateY(-2px);box-shadow:0 12px 28px rgba(138,99,38,.28)}
+.btn-outline{border:1.5px solid var(--brass-deep);color:var(--brass-deep);background:none}
+.btn-outline:hover{background:var(--brass-deep);color:#fff;transform:translateY(-2px)}
 .btn-ghost{border:1.5px solid rgba(247,244,238,.35);color:var(--ivory)}
 .btn-ghost:hover{border-color:var(--ivory);background:rgba(247,244,238,.08)}
 
