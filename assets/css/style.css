@@ -82,8 +82,8 @@ body::before{
   font-size:clamp(2.9rem,6vw,5.6rem);line-height:1.04;letter-spacing:-.005em;
   font-optical-sizing:auto;
 }
-.display em{font-style:italic;font-weight:400;color:var(--forest)}
-.sec-forest .display em{color:var(--brass)}
+.display em,h1 em,h2 em,.h2 em{font-style:italic;font-weight:400;color:var(--brass-deep)}
+.sec-forest .display em,.sec-forest h2 em,.sec-forest .h2 em{color:var(--brass)}
 h1,h2,.h2{font-family:var(--f-heading);font-weight:400;letter-spacing:0;line-height:1.12;font-optical-sizing:auto}
 h3{font-family:var(--f-display);font-weight:600;letter-spacing:-.005em;line-height:1.14;font-optical-sizing:auto}
 .h2{font-size:clamp(2rem,3.6vw,3rem)}
