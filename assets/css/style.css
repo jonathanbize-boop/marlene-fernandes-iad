@@ -190,7 +190,7 @@ p{color:var(--ink-2)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stat{padding:40px 28px;border-right:1px solid var(--line)}
 .stat:last-child{border-right:none}
-.stat b{font-family:var(--f-display);font-size:clamp(2.2rem,3.4vw,3rem);font-weight:400;color:var(--forest);display:block;line-height:1}
+.stat b{font-family:var(--f-heading);font-size:clamp(2.2rem,3.4vw,3rem);font-weight:400;color:var(--forest);display:block;line-height:1}
 .stat span{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-top:8px;display:block}
 
 /* ─── CARTES ─── */
