@@ -341,3 +341,22 @@ p{color:var(--ink-2)}
   .hero-cta{flex-direction:column;align-items:stretch}
   .hero-cta .btn{justify-content:center}
 }
+
+/* ─── BOUTON D'APPEL FLOTTANT (mobile) ─── */
+.fab-call{
+  position:fixed;right:18px;bottom:18px;z-index:1100;
+  width:58px;height:58px;border-radius:50%;
+  background:var(--brass-deep);color:#fff;
+  display:none;align-items:center;justify-content:center;
+  box-shadow:0 10px 26px rgba(138,99,38,.42);
+  transition:transform .22s var(--ease),background .22s;
+}
+.fab-call svg{width:25px;height:25px}
+.fab-call::after{ /* halo pulsé pour attirer l'œil */
+  content:'';position:absolute;inset:0;border-radius:inherit;
+  box-shadow:0 0 0 0 rgba(138,99,38,.45);animation:fab-pulse 2.4s var(--ease) infinite;
+}
+.fab-call:hover,.fab-call:focus-visible,.fab-call:active{background:#6E4E1E;transform:translateY(-2px)}
+@keyframes fab-pulse{0%{box-shadow:0 0 0 0 rgba(138,99,38,.45)}70%{box-shadow:0 0 0 16px rgba(138,99,38,0)}100%{box-shadow:0 0 0 0 rgba(138,99,38,0)}}
+@media (max-width:760px){ .fab-call{display:flex} }
+@media (prefers-reduced-motion: reduce){ .fab-call::after{animation:none} }
